@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Invoice List</title>
+</head>
+<body>
+    <h1>Invoice List</h1>
+
+    <a href="{% url 'upload_invoice' %}" style="text-decoration:None"> Upload Invoice</a><br>
+    <a href="{% url 'api_invoice_data_list' %}" style="text-decoration:None"> View Extracted Data (API)</a><br>
+    <a href="{% url 'logout' %}" style="text-decoration:None"> Log Out</a>
+
+    <ul>
+        {% for invoice in invoices %}
+            <li>{{ invoice.data }}</li>
+        {% endfor %}
+    </ul>
+
+
+</body>
+</html>

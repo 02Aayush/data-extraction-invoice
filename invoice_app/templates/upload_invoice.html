@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Upload Invoice</title>
+</head>
+<body>
+    <h1>Upload Invoice</h1>
+    <form method="post" action="/process_invoice" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input type="file" name="invoice_file" accept=".pdf" required>
+        <button type="submit">Submit</button>
+    </form>
+    <hr>
+    <a href="{% url 'invoice_list' %}" style="text-decoration:None">View Invoices</a><br>
+
+    <a href="{% url 'logout' %}" style="text-decoration:None"> Log Out</a>
+
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Extracted Data</title>
+</head>
+<body>
+    <h1>Invoice Details</h1>
+    <a href="{% url 'invoice_list' %}" style="text-decoration:None"> View Invoices</a><br>
+    <a href="{% url 'logout' %}" style="text-decoration:None"> Log Out</a><br>
+<!--    Replace 'extracted_data.csv' with the actual filename of the CSV file you want to download.-->
+    <a href="{% url 'download_csv' csv_file_path='extracted_data.csv' %}" style="text-decoration:None">Download CSV</a>
+    <pre>{{ data }}</pre>
+
+</body>
+</html>
